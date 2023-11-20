@@ -10,20 +10,78 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;700&family=PT+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
     <title>Train Ticket</title>
   </head>
   <body>
-    <h1 class="train_ticket"></h1>
-    <input type="text" class="costumerName" placeholder="" />
-    <input type="text" class="km" placeholder="" />
-    <input type="text" class="age" placeholder="" />
-    <button class="calcola">Invio</button>
+    <div class="container-fluid">
+      <div class="container">
+        <h2 class="mt-2">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+        <div class="row mt-2 bg-danger pt-3 pb-3 rounded text-white">
+          <div class="col d-flex justify-content-around">
+            <div class="d-inline">
+              <span class="d-block fw-bold mb-2">NOME</span>
+              <input
+                type="text"
+                class="costumerName form-control"
+                placeholder=""
+              />
+            </div>
+            <div class="d-inline">
+              <span class="d-block fw-bold mb-2">DISTANZA</span>
+              <input type="text" class="km form-control" placeholder="" />
+            </div>
+            <div class="d-inline">
+              <span class="d-block fw-bold mb-2">ETÀ</span>
+              <input type="text" class="age form-control" placeholder="" />
+            </div>
+          </div>
+          <div class="col-12 d-flex justify-content-center gap-3 mt-5">
+            <button class="calcola btn btn-light">Genera</button>
+            <button class="clear btn btn-secondary">ANNULLA</button>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4" id="biglietto">
+        <h3 class="mb-2">IL TUO BIGLIETTO</h3>
+        <div class="row">
+          <h4 class="text-light">Dettaglio passeggero</h4>
+          <div class="col-4 bg-danger">
+            <h4 class="d-block mt-2">Nome passeggero</h4>
+            <div class="nome text-white mt-3"></div>
+          </div>
+          <div class="col-6 bg-light">
+            <ul class="d-flex gap-5 list-unstyled justify-content-around">
+              <li>
+                <span class="d-block mt-2 mb-5 fw-bold">Offerta</span>
+                <div class="offerta"></div>
+              </li>
+              <li>
+                <span class="d-block mt-2 mb-5 fw-bold">Carrozza</span>
+                <span class="carrozza"></span>
+              </li>
+              <li>
+                <span class="d-block mt-2 mb-5 bg-warning fw-bold">
+                  Prezzo biglietto</span
+                >
+                <div class="prezzo-biglietto bg-warning"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- JS bootstrap -->
-    <!-- <script
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
-    ></script> -->
+    ></script>
     <!-- JS bootstrap -->
     <script src="script.js"></script>
   </body>

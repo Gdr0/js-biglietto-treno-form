@@ -1,0 +1,8 @@
+body {
+  /* background-color: lightgrey; */
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(129, 80, 80);
+}
+#biglietto {
+  display: none;
+}
